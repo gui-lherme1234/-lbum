@@ -14,21 +14,21 @@ function App() {
   const fetchData = async({query,categoria}) => {
     const apiKey = import.meta.env.VITE_UNSPLASH_API_KEY;
     const response = await axios.get('https://api.unsplash.com/photos/random',{
-
-    params:{
+      params:{
       client_id: apiKey,
-      count: 12,
+      count: 10,
     }
-
-    })
+    });
     setFotos(response.data);
     console.log(response);
+    console.log(response.data);
   };
    
   useEffect(() => {
     fetchData(query, categoria)
   }, []);
 
+  console.log(fotos)
   return (
     <div className='container'>
      <SearchBar/>

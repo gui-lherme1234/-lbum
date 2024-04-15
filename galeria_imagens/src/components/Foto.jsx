@@ -1,11 +1,11 @@
 import React from "react";
 
-const Foto = ({dados}) => {
+const Foto = ({ dados }) => {
     return (
-        <div className = "foto">
-            <img scr={dados.urls.small} alt={dados.alt_description}/>
+        <div className="foto">
+            <img src={dados.urls.small} alt={dados.alt_description}/>
         </div>
-    )
+    );
 }
 
 export default Foto;
